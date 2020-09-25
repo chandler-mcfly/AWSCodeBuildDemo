@@ -32,8 +32,8 @@ phases:
     commands:
       - echo push completed on `date`
       #- kubectl apply -f awscodebuilddemo.yml
-      - kubectl delete -f tomcat-aws-eks.yml
-      - sleep 60
+      - kubectl delete -f awscodebuilddemo.yml
+      - sleep 45
       - kubectl get po,svc,ing
 
 #docker login -u AWS -p $(aws ecr get-login-password) https://$(aws sts get-caller-identity --query 'Account' --output text).dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
